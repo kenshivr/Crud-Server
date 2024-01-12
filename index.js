@@ -30,6 +30,8 @@ app.post("/create", (req,res) => {
         }
     }
     );
+
+    // db.end();
 });
 
 app.get("/empleados", (req,res) => {
@@ -43,7 +45,11 @@ app.get("/empleados", (req,res) => {
         }
     }
     );
+
+    // db.end();
 });
+
+
 
 app.listen(3001, () => {
     console.log("Corriendo en el puerto 3001");
