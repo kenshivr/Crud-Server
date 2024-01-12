@@ -32,6 +32,19 @@ app.post("/create", (req,res) => {
     );
 });
 
+app.get("/empleados", (req,res) => {
+
+    db.query('SELECT * FROM empleados',
+    (err,result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    }
+    );
+});
+
 app.listen(3001, () => {
     console.log("Corriendo en el puerto 3001");
 });
